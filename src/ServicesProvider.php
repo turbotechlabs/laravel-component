@@ -28,6 +28,7 @@ class ServicesProvider extends ServiceProvider
 
         /* Main Card */ 
         Blade::component('panels::main-card', 'main-card');
+        Blade::component('panels::title', 'card:title');
         
     }
 

@@ -1,0 +1,41 @@
+{
+    "name": "turbotech/turbotech-component",
+    "version": "0.0.1-beta",
+    "description": "UIXBase/UIXBase-Laravel components is Build for SmartERP, and SmartPOS Components",
+    "license": "MIT",
+    "homepage": "https://github.com/iMSophat/elements",
+    "type": "library",
+    "keywords": [
+        "sophat"
+    ],
+    "authors": [
+        {
+            "name": "Leat Sophat",
+            "email": "info.sophat@gmail.com",
+            "role": "Developer",
+            "homepage": "https://leatsophat.me"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TURBOTECH\\Component\\ServicesProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=7.4.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "TURBOTECH\\Component\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}

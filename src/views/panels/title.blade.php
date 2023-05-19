@@ -3,7 +3,7 @@
     |--------------------------------------------------------------------------
     |@name          : <x-card:title>
     |@description   : main Card panel
-    |@sources       : https://gitlab.com/turbotech-lab/laravel-component
+    |@sources       : https://github.com/turbotechlabs/laravel-component
     |@version       : 1.0.0
     |
     |--------------------------------------------------------------------------

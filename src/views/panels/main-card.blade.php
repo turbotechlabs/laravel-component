@@ -3,7 +3,7 @@
     |--------------------------------------------------------------------------
     |@name          : <x-main-card>
     |@description   : main Card panel
-    |@sources       : https://gitlab.com/turbotech-lab/laravel-component
+    |@sources       : https://github.com/turbotechlabs/laravel-component
     |@version       : 1.0.0
     |
     |--------------------------------------------------------------------------
@@ -90,9 +90,9 @@
 @endphp
 
 
-<div class="w-full mx-auto px-2 sm:px-5">
+<div class="w-full px-2 mx-auto sm:px-5">
     <div class="grid gap-5 sm:mt-5 {{ $cols ?? '' }}">
-        <div class="bg-white dark:bg-gray-800 col-span-1 rounded shadow-md p-5">
+        <div class="col-span-1 p-5 bg-white rounded shadow-md dark:bg-gray-800">
             {{ $slot }}
         </div>
     </div>

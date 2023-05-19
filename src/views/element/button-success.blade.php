@@ -1,8 +1,8 @@
 @php
     /*
     |--------------------------------------------------------------------------
-    |@name          : <x-button>
-    |@description   : main Card panel
+    |@name          : <x-button:success>
+    |@description   : Button success 
     |@sources       : https://github.com/turbotechlabs/laravel-component
     |@version       : 1.0.0
     |
@@ -23,22 +23,21 @@
     |--------------------------------------------------------------------------
     |@example ✨
     |   
-    |   <x-button 
+    |   <x-button:success
     |       type="button" 
-    |       class="text-white bg-red-500" 
     |       onclick="alert('Hello')" 
     |       ripple> Cancel 
-    |   </x-button>
+    |   </x-button:success>
     */
 @endphp
+
 
 @props([
     'type' => 'button',
     'ripple' => '',
-    'class' => 'text-gray-500',
     'onclick' => '',
     'onmouseover' => '',
-    'size' => 'text-sm',
+    'size' => 'text-sm', 
 ])
 
 @php
@@ -59,6 +58,6 @@
         onmouseover="{{ $onmouseover }}"
     @endif
     
-    class="py-1.5 !w-auto px-3 rounded-md transition-all leading-5 select-none cursor-pointer {{ $size }} {{ $effect }} {{ $class }}">
+    class="py-1.5 !w-auto px-3 rounded-md transition-all leading-5 select-none cursor-pointer {{ $size }} {{ $effect }} focus:bg-success-600 hover:bg-success-600 bg-success-500 dark:bg-success-900 text-white">
     {{ $slot }}
 </button>

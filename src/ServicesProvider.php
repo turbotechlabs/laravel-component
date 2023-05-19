@@ -33,6 +33,11 @@ class ServicesProvider extends ServiceProvider
 
         /* Element Button */ 
         Blade::component('elements::button', 'button');
+        Blade::component('elements::button-primary', 'button:primary');
+        Blade::component('elements::button-secondary', 'button:secondary');
+        Blade::component('elements::button-warning', 'button:warning');
+        Blade::component('elements::button-danger', 'button:danger');
+        Blade::component('elements::button-success', 'button:success');
         
     }
 

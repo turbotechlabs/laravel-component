@@ -25,13 +25,33 @@
     */
 @endphp
 
-@props(["class" => '',])
+@props([
+    "placeholder"   => '000 000 0000',
+    "value"         => '',
+    "id"            => '_undefine_id',
+    "name"          => '',
+])
 
 @php
-    $phone  = str_replace(' ', '', str_replace('-', '', $slot));
+    $phone  = str_replace(' ', '', str_replace('-', '', $value));
     $ac     = substr($phone, 0, 3);
     $prefix = substr($phone, 3, 3);
     $suffix = substr($phone, 6);
 @endphp
 
-<phone-number class="font-roboto {{ $class }}">{{  $ac.' '.$prefix.' '.$suffix }}</phone-number>
+<input 
+    type="text" 
+    id="{{ $id }}"
+    name="{{ $name }}"
+    placeholder="{{ $placeholder }}"
+    
+    @if ($value != "")
+        value="{{  $ac.' '.$prefix.' '.$suffix }}" 
+    @else
+        value="" 
+    @endif
+    
+    class="py-1.5 sm:col-span-2 focus:outline-none px-3 block w-full sm:text-sm bg-white dark:text-white border rounded-md dark:bg-gray-800 focus:border-[color:rgba(var(--ni-primary-500))] disabled:bg-slate-100 read-only:bg-slate-100"
+    onchange="validationNumber(this.id)"
+    onkeypress="return validENNumber(event) && formatPhoneNum(this.id)" 
+>

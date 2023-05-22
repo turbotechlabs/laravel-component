@@ -1,8 +1,8 @@
 @php
     /*
     |--------------------------------------------------------------------------
-    |@name          : <x-card:title>
-    |@description   : main Card panel
+    |@name          : <x-view:phone>
+    |@description   : Format Phone Number
     |@sources       : https://github.com/turbotechlabs/laravel-component
     |@version       : 1.0.0
     |
@@ -14,17 +14,14 @@
     |
     |--------------------------------------------------------------------------
     |@param  ✨
-    |   -> color     : color class name "text-red-400"
+    |   -> class     : tailwindcss class
     |
     |--------------------------------------------------------------------------
     |@example ✨
     |   
-    |   <x-card:title color="text-red-500">
-    |        <div>
-    |            Content Here
-    |        </div>
-    |    </x-card:title>
-    
+    |   <x-view:phone class="text-red-500">
+    |        0000000000
+    |    </x-view:phone>
     */
 @endphp
 

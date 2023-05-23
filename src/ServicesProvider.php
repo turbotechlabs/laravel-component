@@ -43,6 +43,7 @@ class ServicesProvider extends ServiceProvider
 
         /* Format Phone Input */ 
         Blade::component('input::phone-number', 'input:phone');
+        Blade::component('input::name-en', 'input:name:en');
 
         /* Format Phone View */ 
         Blade::component('output::phone-number', 'view:phone');

@@ -1,8 +1,8 @@
 @php
     /*
     |--------------------------------------------------------------------------
-    |   @name          : <x-input:phone>
-    |   @description   : Format Phone Number
+    |   @name          : <x-input:name:en>
+    |   @description   : English Name
     |   @sources       : https://github.com/turbotechlabs/laravel-component
     |   @version       : 1.0.0
     |
@@ -18,11 +18,12 @@
     |   -> value        : update case
     |   -> id           : id tag
     |   -> name         : name tag
+    |   -> mx           : maximum value
     |
     |--------------------------------------------------------------------------
     |   @example ✨
     |   
-    |   <x-input:phone 
+    |   <x-input:name:en 
     |       id="phone" 
     |       name="phone" 
     |       value="012345678"
@@ -32,44 +33,26 @@
 @endphp
 
 @props([
-    "placeholder"   => '000 000 0000',
+    "placeholder"   => 'Name',
     "value"         => '',
     "id"            => '_undefine_id',
     "name"          => '_undefine_name',
+    "max"           => '50',
 ])
 
-@php
-    $phone  = str_replace(' ', '', str_replace('-', '', $value));
-    $ac     = substr($phone, 0, 3);
-    $prefix = substr($phone, 3, 3);
-    $suffix = substr($phone, 6);
-@endphp
 
 <input
     type="text"
     id="{{ $id }}"
     name="{{ $name }}"
     placeholder="{{ $placeholder }}"
+
     @if ($value != "")
-        value="{{  $ac.' '.$prefix.' '.$suffix }}" 
+        value="{{  $value }}" 
     @else
         value="" 
     @endif
     class="py-1.5 sm:col-span-2 focus:outline-none px-3 block w-full sm:text-sm bg-white dark:text-white border rounded-md dark:bg-gray-800 focus:border-primary-500 disabled:bg-slate-100 read-only:bg-slate-100"
-    onchange="validationNumber(this.id)"
-    onkeypress="return validENNumber(event) && formatPhoneNum(this.id)"
+    onkeypress="return new TextValidation().englishCharater(event)"
+    max="{{ $max }}"
 >
-
-<script>
-    const debounce = (callback) => {
-        let timeoutId;
-        clearTimeout(timeoutId)
-        timeoutId = setTimeout( () => callback(), 300);
-    }
-
-    window.validationNumber = (id) => {
-        debounce(
-            ()=> { validateLength(id) }
-        )
-    }
-</script>

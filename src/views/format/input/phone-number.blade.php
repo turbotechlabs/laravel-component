@@ -29,7 +29,7 @@
     "placeholder"   => '000 000 0000',
     "value"         => '',
     "id"            => '_undefine_id',
-    "name"          => '',
+    "name"          => '_undefine_name',
 ])
 
 @php
@@ -50,8 +50,7 @@
     @else
         value="" 
     @endif
-    
-    class="py-1.5 sm:col-span-2 focus:outline-none px-3 block w-full sm:text-sm bg-white dark:text-white border rounded-md dark:bg-gray-800 focus:border-[color:rgba(var(--ni-primary-500))] disabled:bg-slate-100 read-only:bg-slate-100"
+    class="py-1.5 sm:col-span-2 focus:outline-none px-3 block w-full sm:text-sm bg-white dark:text-white border rounded-md dark:bg-gray-800 focus:border-primary-500 disabled:bg-slate-100 read-only:bg-slate-100"
     onchange="validationNumber(this.id)"
     onkeypress="return validENNumber(event) && formatPhoneNum(this.id)" 
 >

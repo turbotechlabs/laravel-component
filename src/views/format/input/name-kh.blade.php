@@ -1,7 +1,7 @@
 @php
     /*
     |--------------------------------------------------------------------------
-    |   @name          : <x-input:name:en>
+    |   @name          : <x-input:name:kh>
     |   @description   : English Name
     |   @sources       : https://github.com/turbotechlabs/laravel-component
     |   @version       : 1.0.0
@@ -23,10 +23,10 @@
     |--------------------------------------------------------------------------
     |   @example ✨
     |   
-    |   <x-input:name:en 
-    |       id="enname" 
-    |       name="enname" 
-    |       value="En Name"
+    |   <x-input:name:kh 
+    |       id="khname" 
+    |       name="khname" 
+    |       value="KH Name"
     |   />
     |
     */
@@ -53,6 +53,6 @@
         value="" 
     @endif
     class="py-1.5 sm:col-span-2 focus:outline-none px-3 block w-full sm:text-sm bg-white dark:text-white border rounded-md dark:bg-gray-800 focus:border-primary-500 disabled:bg-slate-100 read-only:bg-slate-100"
-    onkeypress="return new TextValidation().englishCharater(event)"
+    onkeypress="return new TextValidation().khmerCharater(event)"
     max="{{ $max }}"
 >

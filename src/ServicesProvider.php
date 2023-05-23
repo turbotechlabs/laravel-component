@@ -44,6 +44,7 @@ class ServicesProvider extends ServiceProvider
         /* Format Phone Input */ 
         Blade::component('input::phone-number', 'input:phone');
         Blade::component('input::name-en', 'input:name:en');
+        Blade::component('input::name-kh', 'input:name:kh');
 
         /* Format Phone View */ 
         Blade::component('output::phone-number', 'view:phone');

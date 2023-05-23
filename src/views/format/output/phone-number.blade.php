@@ -28,11 +28,10 @@
 @props(["class" => '',])
 
 @php
-    $phone  = $slot;
+    $phone  = str_replace(' ', '', str_replace('-', '', $slot));
     $ac     = substr($phone, 0, 3);
     $prefix = substr($phone, 3, 3);
     $suffix = substr($phone, 6);
 @endphp
-
 
 <phone-number class="font-roboto {{ $class }}">{{  $ac.' '.$prefix.' '.$suffix }}</phone-number>

@@ -54,3 +54,18 @@
     onchange="validationNumber(this.id)"
     onkeypress="return validENNumber(event) && formatPhoneNum(this.id)" 
 >
+
+
+<script>
+    const debounce = (callback) => {
+        let timeoutId;
+        clearTimeout(timeoutId)
+        timeoutId = setTimeout( () => callback(), 300);
+    }
+
+    window.validationNumber = (id) => {
+        debounce(
+            ()=> { validateLength(id) }
+        )
+    }
+</script>

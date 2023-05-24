@@ -1,8 +1,8 @@
 @php
     /*
     |--------------------------------------------------------------------------
-    |   @name          : <x-input:phone>
-    |   @description   : Format Phone Number
+    |   @name          : <x-input:mail>
+    |   @description   : Email Input
     |   @sources       : https://github.com/turbotechlabs/laravel-component
     |   @version       : 1.0.0
     |
@@ -18,44 +18,41 @@
     |   -> value        : update case
     |   -> id           : id tag
     |   -> name         : name tag
+    |   -> mx           : maximum value
     |
     |--------------------------------------------------------------------------
     |   @example ✨
     |   
-    |   <x-input:phone 
-    |       id="phone" 
-    |       name="phone" 
-    |       value="012345678"
+    |   <x-input:mail
+    |       id="url" 
+    |       name="url" 
+    |       value="URL Name"
     |   />
     |
     */
 @endphp
 
 @props([
-    "placeholder"   => '000 000 0000',
+    "placeholder"   => 'Email',
     "value"         => '',
     "id"            => '_undefine_id',
     "name"          => '_undefine_name',
+    "max"           => '50',
 ])
 
-@php
-    $phone  = str_replace(' ', '', str_replace('-', '', $value));
-    $ac     = substr($phone, 0, 3);
-    $prefix = substr($phone, 3, 3);
-    $suffix = substr($phone, 6);
-@endphp
 
 <input
     type="text"
     id="{{ $id }}"
     name="{{ $name }}"
     placeholder="{{ $placeholder }}"
+
     @if ($value != "")
-        value="{{  $ac.' '.$prefix.' '.$suffix }}" 
+        value="{{  $value }}" 
     @else
         value="" 
     @endif
     class="py-1.5 sm:col-span-2 focus:outline-none px-3 block w-full sm:text-sm bg-white dark:text-white border rounded-md dark:bg-gray-800 focus:border-primary-500 disabled:bg-slate-100 read-only:bg-slate-100"
-    onchange="return new TextValidation().validationPhone(event)"
-    onkeypress="return new TextValidation().phone(event)"
+    onchange="return new TextValidation().email(event)"
+    max="{{ $max }}"
 >

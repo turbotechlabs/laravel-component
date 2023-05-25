@@ -40,47 +40,47 @@
             break;
 
         case '2':
-            $cols = 'grid-cols-2';
+            $cols = 'grid-cols-1 sm:grid-cols-2';
             break;
 
         case '3':
-            $cols = 'grid-cols-3';
+            $cols = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3';
             break;
 
         case '4':
-            $cols = 'grid-cols-4';
+            $cols = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4';
             break;
 
         case '5':
-            $cols = 'grid-cols-5';
+            $cols = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5';
             break;
 
         case '6':
-            $cols = 'grid-cols-6';
+            $cols = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6';
             break;
 
         case '7':
-            $cols = 'grid-cols-7';
+            $cols = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-7';
             break;
 
         case '8':
-            $cols = 'grid-cols-8';
+            $cols = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-8';
             break;
 
         case '9':
-            $cols = 'grid-cols-9';
+            $cols = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-9';
             break;
 
         case '10':
-            $cols = 'grid-cols-10';
+            $cols = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-10';
             break;
 
         case '11':
-            $cols = 'grid-cols-11';
+            $cols = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-11';
             break;
 
         case '12':
-            $cols = 'grid-cols-12';
+            $cols = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-12';
             break;
         
         default:

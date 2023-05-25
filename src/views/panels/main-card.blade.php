@@ -92,8 +92,12 @@
 
 <div class="w-full px-2 mx-auto sm:px-5">
     <div class="grid gap-5 sm:mt-5 {{ $cols ?? '' }}">
-        <div class="col-span-1 p-5 bg-white rounded shadow-md dark:bg-gray-800">
-            {{ $slot }}
-        </div>
+        @if ($grid == 1 || $grid == null || $grid == "")
+            <div class="col-span-1 p-5 bg-white rounded shadow-md dark:bg-gray-800">
+                {{ $slot }}
+            </div>
+        @else
+        {{ $slot }}
+        @endif
     </div>
 </div>

@@ -58,7 +58,7 @@
     @endif
 
     @if ($attributes)
-        {{ $attributes->merge(['class'=>'py-1.5 text-sm font-poppins !w-auto px-3 rounded-md transition-all leading-5 select-none cursor-pointer focus:bg-warning-600 hover:bg-warning-600 bg-warning-500 dark:bg-warning-900 text-white '.$size.' '.$effect]) }}
+        {{ $attributes->merge(['class'=>'py-1.5 text-sm font-poppins !w-auto px-3 rounded-md transition-all leading-5 select-none cursor-pointer hover:bg-warning-600 bg-warning-500 dark:bg-warning-900 text-white '.$size.' '.$effect]) }}
     @endif >
     {{ $slot }}
 </button>

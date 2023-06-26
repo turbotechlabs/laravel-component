@@ -28,6 +28,7 @@ class ServicesProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/views/element/buttons', 'buttons');
         $this->loadViewsFrom(__DIR__.'/views/format/input', 'input');
         $this->loadViewsFrom(__DIR__.'/views/format/output', 'output');
+        $this->loadViewsFrom(__DIR__.'/views/display', 'displays');
 
         /* Main Card */ 
         Blade::component('panels::main-card', 'main-card');
@@ -52,6 +53,11 @@ class ServicesProvider extends ServiceProvider
 
         /* Format Phone View */ 
         Blade::component('output::phone-number', 'view:phone');
+
+        /* Display */ 
+        Blade::component('displays::list-loading', 'table:loading');
+        Blade::component('displays::list', 'table');
+        Blade::component('displays::datatable', 'datatable');
         
     }
 

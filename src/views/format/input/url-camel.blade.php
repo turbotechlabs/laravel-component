@@ -46,13 +46,14 @@
     id="{{ $id }}"
     name="{{ $name }}"
     placeholder="{{ $placeholder }}"
-
     @if ($value != "")
         value="{{  $value }}" 
     @else
         value="" 
     @endif
-    class="py-1.5 sm:col-span-2 focus:outline-none px-3 block w-full sm:text-sm bg-white dark:text-white border rounded-md dark:bg-gray-800 focus:border-primary-500 disabled:bg-slate-100 read-only:bg-slate-100"
+    @if ($attributes)
+        {{ $attributes->merge(['class'=>'py-1.5 sm:col-span-2 focus:outline-none px-3 block w-full sm:text-sm bg-white dark:text-white border rounded-md dark:bg-gray-800 focus:border-primary-500 disabled:bg-slate-100 read-only:bg-slate-100']) }}
+    @endif
     onkeypress="return new TextValidation().urlCamelCaseCharater(event)"
     max="{{ $max }}"
 >

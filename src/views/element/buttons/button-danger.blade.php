@@ -53,11 +53,11 @@
     @if ($onclick != "" && $onclick != null)
         onclick="{{ $onclick }}"
     @endif
-
     @if ($onmouseover != "" && $onmouseover != null)
         onmouseover="{{ $onmouseover }}"
     @endif
-    
-    class="py-1.5 !w-auto px-3 rounded-md transition-all leading-5 select-none cursor-pointer {{ $size }} {{ $effect }} focus:bg-danger-600 hover:bg-danger-600 bg-danger-500 dark:bg-danger-900 text-white">
+    @if ($attributes)
+        {{ $attributes->merge(['class'=>'py-1.5 text-sm font-poppins !w-auto px-3 rounded-md transition-all leading-5 select-none cursor-pointer hover:bg-danger-600 bg-danger-500 dark:bg-danger-900 text-white '.$size.' '.$effect]) }}
+    @endif >
     {{ $slot }}
 </button>

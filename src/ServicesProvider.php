@@ -29,6 +29,7 @@ class ServicesProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/views/format/input', 'input');
         $this->loadViewsFrom(__DIR__.'/views/format/output', 'output');
         $this->loadViewsFrom(__DIR__.'/views/display', 'displays');
+        $this->loadViewsFrom(__DIR__.'/views/search', 'search');
 
         /* Main Card */ 
         Blade::component('panels::main-card', 'main-card');
@@ -58,6 +59,9 @@ class ServicesProvider extends ServiceProvider
         Blade::component('displays::list-loading', 'table:loading');
         Blade::component('displays::list', 'table');
         Blade::component('displays::datatable', 'datatable');
+
+        /* Search SEO */ 
+        Blade::component('search::seo', 'seo');
         
     }
 

@@ -56,7 +56,7 @@
     @endif
 
     @if ($attributes)
-        {{ $attributes->merge(['class'=>'py-1.5 !w-auto px-3 rounded-md transition-all leading-5 select-none cursor-pointer '.$size.' '.$class.' '.$effect]) }}
+        {{ $attributes->merge(['class'=>'py-1.5 w-auto px-3 rounded-md transition-all leading-5 select-none cursor-pointer '.$size.' '.$class.' '.$effect]) }}
     @endif
 
     @if ($onmouseover != "" && $onmouseover != null)

@@ -46,7 +46,7 @@
     
     <h1 class="flex items-center pb-3 text-lg font-medium leading-5 dark:text-gray-200"> 
         <i class="nil {{ $attributes['icon'] ? $attributes['icon'] : '' }} mr-1 text-xl font-thin text-primary-500"></i> 
-        <span class="line-clamp-1">{{ $attributes['title'] ? $attributes['title'] : '' }}</span> 
+        <span class="leading-7 line-clamp-1">{{ $attributes['title'] ? $attributes['title'] : '' }}</span> 
     </h1>
     
     <div class="flex items-center justify-end flex-shrink-0 gap-3 ml-auto font-medium">
@@ -143,7 +143,7 @@
                     class="tooltip bg-white border-y border-l waves-effect flex !w-8 h-8 rounded-l-md drop-shadow-sm" 
                     title="View as list"
                     >
-                        <i class="nil #list-ul text-primary-500"></i>
+                        <i class="nil #list-ul {{ $attributes['view'] == 'list' ? 'text-primary-500' : 'text-slate-500' }}"></i>
                 </button>
             @endisset
             @isset($attributes['func']->grid)
@@ -153,7 +153,7 @@
                     class="tooltip bg-white border waves-effect flex !w-8 h-8 rounded-r-md drop-shadow-sm" 
                     title="View as grid"
                     >
-                        <i class="nis #th text-slate-500"></i>
+                        <i class="nis #th {{ $attributes['view'] == 'grid' ? 'text-primary-500' : 'text-slate-500' }}"></i>
                 </button>
             @endisset
         </div>

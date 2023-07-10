@@ -59,6 +59,7 @@ class ServicesProvider extends ServiceProvider
         Blade::component('displays::list-loading', 'table:loading');
         Blade::component('displays::list', 'table');
         Blade::component('displays::datatable', 'datatable');
+        Blade::component('displays::sample-header', 'heading');
 
         /* Search SEO */ 
         Blade::component('search::seo', 'seo');

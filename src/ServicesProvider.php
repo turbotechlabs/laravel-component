@@ -30,11 +30,13 @@ class ServicesProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/views/format/output', 'output');
         $this->loadViewsFrom(__DIR__.'/views/display', 'displays');
         $this->loadViewsFrom(__DIR__.'/views/search', 'search');
+        $this->loadViewsFrom(__DIR__.'/views/carousel', 'carousel');
 
         /* Main Card */ 
         Blade::component('panels::main-card', 'main-card');
         Blade::component('panels::inner-card', 'card-inner');
         Blade::component('panels::title', 'card:title');
+        Blade::component('panels::service-card', 'service:card');
 
         /* Element Button */ 
         Blade::component('buttons::button', 'button');
@@ -56,11 +58,18 @@ class ServicesProvider extends ServiceProvider
         Blade::component('output::phone-number', 'view:phone');
 
         /* Display */ 
+        Blade::component('displays::offer', 'offer');
+        Blade::component('displays::hero', 'hero');
         Blade::component('displays::list-loading', 'table:loading');
         Blade::component('displays::list', 'table');
         Blade::component('displays::datatable', 'datatable');
         Blade::component('displays::sample-header', 'heading');
         Blade::component('displays::nav', 'navigation');
+        Blade::component('displays::service-card', 'service:card');
+        Blade::component('displays::price-card', 'price:card');
+
+        /* Carousel */ 
+        Blade::component('carousel::logo-clouds', 'logo-clouds');
 
         /* Search SEO */ 
         Blade::component('search::seo', 'seo');

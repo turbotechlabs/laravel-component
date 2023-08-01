@@ -93,7 +93,7 @@
 
 <div {{ $attributes->merge(['class' => 'w-full px-2 mx-auto sm:px-5']) }}>
     <div class="grid gap-5 sm:mt-5 {{ $cols ?? '' }}" id="{{ $id }}">
-        @if ($grid == 1 || $grid == null || $grid == "")
+        @if ($grid == null || $grid == "")
             <div class="col-span-1 p-3 bg-white rounded shadow-md sm:p-5 dark:bg-gray-800">
                 {{ $slot }}
             </div>

@@ -29,6 +29,6 @@
 @endphp
 
 
-<div class="col-span-1 p-3 bg-white rounded shadow-md sm:p-5 dark:bg-gray-800">
+<div {{ $attributes->merge(['class'=>'p-3 bg-white rounded shadow-md sm:p-5 dark:bg-gray-800']) }}>
     {{ $slot }}
 </div>

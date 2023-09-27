@@ -25,16 +25,13 @@
         }
     },
     "require": {
-        "php": ">=7.4.0"
+        "php": ">=7.4.0",
+        "turbotech/turbotech-component": "*"
+
     },
     "autoload": {
         "psr-4": {
             "TURBOTECH\\Component\\": "src"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "v0.1.0-dev"
         }
     },
     "autoload-dev": {

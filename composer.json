@@ -25,9 +25,7 @@
         }
     },
     "require": {
-        "php": ">=7.4.0",
-        "turbotech/turbotech-component": "*"
-
+        "php": ">=7.4.0"
     },
     "autoload": {
         "psr-4": {

@@ -1,6 +1,5 @@
 {
     "name": "turbotech/turbotech-component",
-    "version": "0.0.1-beta",
     "description": "turbotech/turbotech-components is a Laravel components framework builder developed based on Laravel/framework and TailwindCss for styling. It provides a set of Laravel components that can be used to build Laravel applications.",
     "license": "MIT",
     "homepage": "https://turbotech.gitbook.io",
@@ -31,6 +30,11 @@
     "autoload": {
         "psr-4": {
             "TURBOTECH\\Component\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "v0.1.0-dev"
         }
     },
     "autoload-dev": {

@@ -35,7 +35,7 @@
                 @isset($attributes['data']->logo)
                     @php $logo = (object)$attributes['data']->logo @endphp
                     <a href="{{ isset($logo->route) ? $logo->route : "/" }}">
-                        <img class="object-cover w-16 transition-all sm:w-24 lg:w-32" src="{{ $logo->image ?: "" }}" alt="">
+                        <img class="object-cover w-16 transition-all sm:w-24 lg:w-32" src="{{ $logo->url ? $logo->url : null }}{{ $logo->image ?: "" }}" alt="">
                     </a>
                 @endisset
             </div>
@@ -119,7 +119,7 @@
                 <div class="flex items-start justify-between">
                     <div>
                         <a href="{{ isset($logo->route) ? $logo->route : "/" }}">
-                            <img class="object-cover w-16 transition-all" src="{{ $logo->image ?: "" }}" alt="">
+                            <img class="object-cover w-16 transition-all" src="{{ $logo->url ? $logo->url : null }}{{ $logo->image ?: "" }}" alt="">
                         </a>
                     </div>
                     
